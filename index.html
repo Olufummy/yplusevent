@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yommy Plus Event | Premium Event </title>
+    <meta name="description" content="Yommy Plus Event delivers premium event coverage, videography, photography, and full-scale event production for unforgettable experiences.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF3366',    // Bold accent color
+                        secondary: '#00C2FF',  // Complementary accent
+                        dark: '#0A0A0A',       // Rich black background
+                        'dark-light': '#1A1A1A', // Slightly lighter dark
+                        'light': '#F8F9FA',    // Off-white
+                        'light-gray': '#E8E8E8'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'display': ['Montserrat', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'scale-up': 'scaleUp 0.3s ease-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        scaleUp: {
+                            '0%': { transform: 'scale(0.95)', opacity: '0' },
+                            '100%': { transform: 'scale(1)', opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎬</text></svg>">
+    
+    <style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1A1A1A;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #FF3366;
+            border-radius: 5px;
+        }
+        
+        /* Selection color */
+        ::selection {
+            background-color: rgba(255, 51, 102, 0.3);
+        }
+        
+        /* Smooth transitions */
+        * {
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+        
+        /* Image hover effects */
+        .gallery-item {
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .gallery-item:hover {
+            transform: translateY(-8px);
+        }
+        
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, #FF3366 0%, #00C2FF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-dark text-light font-sans overflow-x-hidden">
+    <!-- Reusable Container -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+
+        <!-- Content goes here -->
+
+                <!-- Navigation -->
+        <nav class="py-6 flex items-center justify-between sticky top-0 z-50 bg-dark/90 backdrop-blur-md">
+            <!-- Logo - In production, replace with actual logo image -->
+            <a href="#" class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
+                    <span class="text-2xl">🎬</span>
+                </div>
+                <span class="text-xl font-display font-bold">YOMMY PLUS EVENT</span>
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#services" class="hover:text-primary transition-colors duration-300">Services</a>
+                <a href="#gallery" class="hover:text-primary transition-colors duration-300">Gallery</a>
+                <a href="#portfolio" class="hover:text-primary transition-colors duration-300">Portfolio</a>
+                <a href="#partners" class="hover:text-primary transition-colors duration-300">Partners</a>
+                <a href="#contact" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-primary/90 transition-all duration-300 transform hover:scale-105">
+                    Book Now
+                </a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobileMenuButton" class="md:hidden text-2xl">
+                ☰
+            </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden fixed inset-0 bg-dark z-40 flex flex-col items-center justify-center space-y-8 text-xl transform -translate-x-full transition-transform duration-300">
+            <button id="closeMenu" class="absolute top-6 right-6 text-3xl">×</button>
+            <a href="#services" class="hover:text-primary transition-colors duration-300">Services</a>
+            <a href="#gallery" class="hover:text-primary transition-colors duration-300">Gallery</a>
+            <a href="#portfolio" class="hover:text-primary transition-colors duration-300">Portfolio</a>
+            <a href="#partners" class="hover:text-primary transition-colors duration-300">Partners</a>
+            <a href="#contact" class="bg-primary text-white px-8 py-3 rounded-full hover:bg-primary/90">
+                Book Now
+            </a>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="min-h-[90vh] flex flex-col justify-center relative overflow-hidden">
+            <!-- Background Video/Image Placeholder -->
+            <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 bg-gradient-to-b from-dark via-dark/80 to-dark z-10"></div>
+                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1920')] bg-cover bg-center opacity-20"></div>
+            </div>
+            
+            <!-- Hero Content -->
+            <div class="relative z-20 animate-fade-in">
+                <div class="max-w-3xl">
+                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-display font-bold leading-tight mb-6">
+                        CAPTURE THE
+                        <span class="gradient-text">MOMENT</span>
+                    </h1>
+                    
+                    <p class="text-xl md:text-2xl text-light-gray mb-10 max-w-2xl animate-slide-up">
+                        We transform events into cinematic experiences through premium coverage, 
+                        production, and storytelling that lasts forever.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 animate-slide-up" style="animation-delay: 0.2s">
+                        <a href="#contact" class="bg-primary text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-primary/90 transition-all duration-300 transform hover:scale-105 text-center">
+                            Book Your Event
+                        </a>
+                        <a href="#gallery" class="bg-transparent border-2 border-light-gray text-light-gray px-8 py-4 rounded-full text-lg font-semibold hover:border-primary hover:text-primary transition-all duration-300 text-center">
+                            Watch Our Work
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 max-w-3xl">
+                    <div class="text-center">
+                        <div class="text-4xl md:text-5xl font-bold text-primary mb-2">500+</div>
+                        <div class="text-light-gray">Events Covered</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl md:text-5xl font-bold text-secondary mb-2">50+</div>
+                        <div class="text-light-gray">Cities Worldwide</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl md:text-5xl font-bold text-primary mb-2">98%</div>
+                        <div class="text-light-gray">Client Satisfaction</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl md:text-5xl font-bold text-secondary mb-2">24/7</div>
+                        <div class="text-light-gray">Support</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <a href="#services" class="text-light-gray hover:text-primary transition-colors">
+                    ↓
+                </a>
+            </div>
+        </section>
+
+                <!-- Services Section -->
+        <section id="services" class="py-20 md:py-32">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-display font-bold mb-6">
+                    <span class="gradient-text">What We Do</span>
+                </h2>
+                <p class="text-xl text-light-gray max-w-2xl mx-auto">
+                    Comprehensive event solutions from concept to delivery
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service Card 1 -->
+                <div class="bg-dark-light p-8 rounded-2xl gallery-item hover:border-primary/50 border border-transparent">
+                    <div class="w-16 h-16 bg-primary/20 rounded-xl flex items-center justify-center mb-6">
+                        <span class="text-3xl">🎥</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Event Coverage</h3>
+                    <p class="text-light-gray mb-6">
+                        Full-day documentation with multiple camera setups, capturing every important moment from start to finish.
+                    </p>
+                    <a href="#" class="text-primary font-semibold hover:underline inline-flex items-center">
+                        Learn more →
+                    </a>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="bg-dark-light p-8 rounded-2xl gallery-item hover:border-primary/50 border border-transparent">
+                    <div class="w-16 h-16 bg-secondary/20 rounded-xl flex items-center justify-center mb-6">
+                        <span class="text-3xl">📸</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Videography & Photography</h3>
+                    <p class="text-light-gray mb-6">
+                        Cinematic video production and professional photography that tells your event's unique story.
+                    </p>
+                    <a href="#" class="text-primary font-semibold hover:underline inline-flex items-center">
+                        View portfolio →
+                    </a>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="bg-dark-light p-8 rounded-2xl gallery-item hover:border-primary/50 border border-transparent">
+                    <div class="w-16 h-16 bg-primary/20 rounded-xl flex items-center justify-center mb-6">
+                        <span class="text-3xl">🌐</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Live Streaming</h3>
+                    <p class="text-light-gray mb-6">
+                        Professional multi-camera live streaming with production quality for global virtual audiences.
+                    </p>
+                    <a href="#" class="text-primary font-semibold hover:underline inline-flex items-center">
+                        See options →
+                    </a>
+                </div>
+                
+                <!-- Service Card 4 -->
+                <div class="bg-dark-light p-8 rounded-2xl gallery-item hover:border-primary/50 border border-transparent">
+                    <div class="w-16 h-16 bg-secondary/20 rounded-xl flex items-center justify-center mb-6">
+                        <span class="text-3xl">✨</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Event Production</h3>
+                    <p class="text-light-gray mb-6">
+                        End-to-end event coordination, technical production, and creative direction for seamless execution.
+                    </p>
+                    <a href="#" class="text-primary font-semibold hover:underline inline-flex items-center">
+                        Our process →
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+<!-- components/VideoGallery.html -->
+<section id="gallery" class="py-20 md:py-32">
+    <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-display font-bold mb-6">
+            <span class="gradient-text">Event Highlights</span>
+        </h2>
+        <p class="text-xl text-light-gray max-w-2xl mx-auto">
+            Experience the energy and emotion we capture at every event
+        </p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Video 1 - Wedding -->
+        <div class="relative rounded-2xl overflow-hidden gallery-item cursor-pointer group" 
+             data-video-src="assets/videos/event-videos/intro.mp4"
+             data-video-title="Destination Wedding in Bali">
+            <div class="aspect-video bg-dark-light relative">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+                <!-- Local thumbnail image -->
+                <div class="absolute inset-0 bg-[url('assets/videos/video-thumbnails/wedding-thumbnail.jpg')] bg-cover bg-center"></div>
+                <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20"></div>
+                <div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold z-30">
+                    Wedding
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center z-30">
+                    <div class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
+                        <span class="text-3xl text-dark">▶</span>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 z-30">
+                <h3 class="text-xl font-bold mb-2">Destination Wedding in Bali</h3>
+                <p class="text-light-gray text-sm">Cinematic highlight film | 3:45 min</p>
+            </div>
+        </div>
+        
+        <!-- Video 2 - Corporate Event -->
+        <div class="relative rounded-2xl overflow-hidden gallery-item cursor-pointer group"
+             data-video-src="assets/videos/event-videos/corporate-event.mp4"
+             data-video-title="Tech Conference Keynote">
+            <div class="aspect-video bg-dark-light relative">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+                <!-- Local thumbnail image -->
+                <div class="absolute inset-0 bg-[url('assets/videos/video-thumbnails/conference-thumbnail.jpg')] bg-cover bg-center"></div>
+                <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20"></div>
+                <div class="absolute top-4 left-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-semibold z-30">
+                    Corporate
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center z-30">
+                    <div class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
+                        <span class="text-3xl text-dark">▶</span>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 z-30">
+                <h3 class="text-xl font-bold mb-2">Tech Conference Keynote</h3>
+                <p class="text-light-gray text-sm">Multi-camera production | 4:20 min</p>
+            </div>
+        </div>
+        
+        <!-- Video 3 - Music Festival -->
+        <div class="relative rounded-2xl overflow-hidden gallery-item cursor-pointer group"
+             data-video-src="assets/videos/event-videos/music-festival.mp4"
+             data-video-title="Music Festival Aftermovie">
+            <div class="aspect-video bg-dark-light relative">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+                <!-- Local thumbnail image -->
+                <div class="absolute inset-0 bg-[url('assets/videos/video-thumbnails/festival-thumbnail.jpg')] bg-cover bg-center"></div>
+                <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20"></div>
+                <div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold z-30">
+                    Music
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center z-30">
+                    <div class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
+                        <span class="text-3xl text-dark">▶</span>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 z-30">
+                <h3 class="text-xl font-bold mb-2">Music Festival Aftermovie</h3>
+                <p class="text-light-gray text-sm">Event highlight reel | 2:55 min</p>
+            </div>
+        </div>
+        
+        <!-- Video 4 - Concert -->
+        <div class="relative rounded-2xl overflow-hidden gallery-item cursor-pointer group"
+             data-video-src="assets/videos/event-videos/concert-event.mp4"
+             data-video-title="Live Concert Experience">
+            <div class="aspect-video bg-dark-light relative">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+                <!-- Local thumbnail image -->
+                <div class="absolute inset-0 bg-[url('assets/videos/video-thumbnails/concert-thumbnail.jpg')] bg-cover bg-center"></div>
+                <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20"></div>
+                <div class="absolute top-4 left-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-semibold z-30">
+                    Concert
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center z-30">
+                    <div class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
+                        <span class="text-3xl text-dark">▶</span>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 z-30">
+                <h3 class="text-xl font-bold mb-2">Live Concert Experience</h3>
+                <p class="text-light-gray text-sm">Dynamic multi-angle | 5:10 min</p>
+            </div>
+        </div>
+        
+        <!-- Video 5 - Gala Dinner -->
+        <div class="relative rounded-2xl overflow-hidden gallery-item cursor-pointer group"
+             data-video-src="assets/videos/event-videos/gala-event.mp4"
+             data-video-title="Charity Gala Dinner">
+            <div class="aspect-video bg-dark-light relative">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+                <!-- Local thumbnail image -->
+                <div class="absolute inset-0 bg-[url('assets/videos/video-thumbnails/gala-thumbnail.jpg')] bg-cover bg-center"></div>
+                <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20"></div>
+                <div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold z-30">
+                    Gala
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center z-30">
+                    <div class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
+                        <span class="text-3xl text-dark">▶</span>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 z-30">
+                <h3 class="text-xl font-bold mb-2">Charity Gala Dinner</h3>
+                <p class="text-light-gray text-sm">Elegant coverage | 4:15 min</p>
+            </div>
+        </div>
+        
+        <!-- Video 6 - Promo Video -->
+        <div class="relative rounded-2xl overflow-hidden gallery-item cursor-pointer group"
+             data-video-src="assets/videos/event-videos/promo-video.mp4"
+             data-video-title="Yommy Plus Event Showreel">
+            <div class="aspect-video bg-dark-light relative">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+                <!-- Local thumbnail image -->
+                <div class="absolute inset-0 bg-[url('assets/videos/video-thumbnails/corporate-thumbnail.jpg')] bg-cover bg-center"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20"></div>
+                <div class="absolute top-4 left-4 bg-gradient-to-r from-primary to-secondary text-white px-3 py-1 rounded-full text-sm font-semibold z-30">
+                    Showreel
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center z-30">
+                    <div class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
+                        <span class="text-3xl text-dark">▶</span>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 z-30">
+                <h3 class="text-xl font-bold mb-2">Yommy Plus Event Showreel</h3>
+                <p class="text-light-gray text-sm">Our best moments | 2:30 min</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Video Modal -->
+    <div id="videoModal" class="fixed inset-0 bg-black/90 z-50 hidden items-center justify-center p-4">
+        <div class="relative w-full max-w-6xl">
+            <button id="closeVideo" class="absolute -top-12 right-0 text-white text-3xl hover:text-primary transition-colors z-50">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="aspect-video bg-dark-light rounded-xl overflow-hidden">
+                <video id="videoPlayer" class="w-full h-full" controls controlsList="nodownload">
+                    <!-- Video source will be dynamically added -->
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="mt-4 text-center">
+                <h3 id="videoTitle" class="text-2xl font-bold text-white"></h3>
+                <p id="videoDescription" class="text-light-gray mt-2"></p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- View More Button -->
+    <div class="text-center mt-12">
+        <a href="#" class="inline-flex items-center justify-center bg-dark-light hover:bg-primary/20 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 group">
+            View All Events
+            <span class="ml-3 transform group-hover:translate-x-2 transition-transform">→</span>
+        </a>
+    </div>
+</section>
+
+
+                <!-- Portfolio Section -->
+        <section id="portfolio" class="py-20 md:py-32">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-display font-bold mb-6">
+                    <span class="gradient-text">Featured Events</span>
+                </h2>
+                <p class="text-xl text-light-gray max-w-2xl mx-auto">
+                    Our signature events that showcase our premium coverage quality
+                </p>
+            </div>
+            
+            <div class="space-y-12">
+                <!-- Portfolio Item 1 -->
+                <div class="grid lg:grid-cols-2 gap-8 items-center">
+                    <div class="relative rounded-3xl overflow-hidden gallery-item">
+                        <div class="aspect-square bg-gradient-to-br from-primary/20 to-secondary/20">
+                            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800')] bg-cover bg-center"></div>
+                        </div>
+                    </div>
+                    <div class="lg:pl-8">
+                        <div class="text-primary font-semibold mb-2">LUXURY WEDDING</div>
+                        <h3 class="text-3xl md:text-4xl font-bold mb-6">Italian Villa Wedding Celebration</h3>
+                        <p class="text-light-gray mb-6">
+                            Three-day wedding celebration captured with documentary-style coverage, 
+                            drone cinematography, and a full 4K cinematic film.
+                        </p>
+                        <div class="flex flex-wrap gap-4 mb-8">
+                            <span class="bg-dark-light px-4 py-2 rounded-full">Videography</span>
+                            <span class="bg-dark-light px-4 py-2 rounded-full">Photography</span>
+                            <span class="bg-dark-light px-4 py-2 rounded-full">Drone Coverage</span>
+                        </div>
+                        <a href="#" class="text-primary font-semibold hover:underline inline-flex items-center text-lg">
+                            View Full Gallery →
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 2 -->
+                <div class="grid lg:grid-cols-2 gap-8 items-center">
+                    <div class="lg:order-2 relative rounded-3xl overflow-hidden gallery-item">
+                        <div class="aspect-square bg-gradient-to-br from-secondary/20 to-primary/20">
+                            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800')] bg-cover bg-center"></div>
+                        </div>
+                    </div>
+                    <div class="lg:pr-8 lg:order-1">
+                        <div class="text-secondary font-semibold mb-2">CORPORATE EVENT</div>
+                        <h3 class="text-3xl md:text-4xl font-bold mb-6">Global Product Launch Event</h3>
+                        <p class="text-light-gray mb-6">
+                            Worldwide live stream with simultaneous translation, multi-camera production, 
+                            and interactive virtual experiences for remote attendees.
+                        </p>
+                        <div class="flex flex-wrap gap-4 mb-8">
+                            <span class="bg-dark-light px-4 py-2 rounded-full">Live Streaming</span>
+                            <span class="bg-dark-light px-4 py-2 rounded-full">Event Production</span>
+                            <span class="bg-dark-light px-4 py-2 rounded-full">Technical Direction</span>
+                        </div>
+                        <a href="#" class="text-secondary font-semibold hover:underline inline-flex items-center text-lg">
+                            View Case Study →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+             <!-- Partners Section -->
+        <section id="partners" class="py-20 md:py-32">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-display font-bold mb-6">
+                    Trusted By <span class="gradient-text">Leaders</span>
+                </h2>
+                <p class="text-xl text-light-gray max-w-2xl mx-auto">
+                    We partner with premium brands and event organizers worldwide
+                </p>
+            </div>
+            
+            <!-- Partner Logos Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center">
+                <div class="flex items-center justify-center p-6 bg-dark-light rounded-xl hover:scale-105 transition-transform duration-300 grayscale hover:grayscale-0">
+                    <span class="text-2xl font-bold text-light-gray">LUXURY EVENTS</span>
+                </div>
+                <div class="flex items-center justify-center p-6 bg-dark-light rounded-xl hover:scale-105 transition-transform duration-300 grayscale hover:grayscale-0">
+                    <span class="text-2xl font-bold text-light-gray">PREMIER VENUES</span>
+                </div>
+                <div class="flex items-center justify-center p-6 bg-dark-light rounded-xl hover:scale-105 transition-transform duration-300 grayscale hover:grayscale-0">
+                    <span class="text-2xl font-bold text-light-gray">CORP GROUP</span>
+                </div>
+                <div class="flex items-center justify-center p-6 bg-dark-light rounded-xl hover:scale-105 transition-transform duration-300 grayscale hover:grayscale-0">
+                    <span class="text-2xl font-bold text-light-gray">GLOBAL TECH</span>
+                </div>
+                <div class="flex items-center justify-center p-6 bg-dark-light rounded-xl hover:scale-105 transition-transform duration-300 grayscale hover:grayscale-0">
+                    <span class="text-2xl font-bold text-light-gray">ELITE WEDDINGS</span>
+                </div>
+            </div>
+            
+            <!-- Testimonial -->
+            <div class="mt-20 max-w-3xl mx-auto text-center">
+                <div class="text-6xl text-primary/20 mb-6">"</div>
+                <p class="text-2xl md:text-3xl font-light mb-8">
+                    Yommy Plus Event transformed our annual conference into a cinematic experience. 
+                    Their attention to detail and creative vision exceeded all expectations.
+                </p>
+                <div class="font-semibold text-lg">Sarah Johnson</div>
+                <div class="text-light-gray">Event Director, Global Tech Summit</div>
+            </div>
+        </section>
+
+          <!-- Contact Section -->
+        <section id="contact" class="py-20 md:py-32">
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-display font-bold mb-6">
+                        Let's Create <span class="gradient-text">Magic</span>
+                    </h2>
+                    <p class="text-xl text-light-gray mb-10">
+                        Share your vision with us, and we'll bring it to life with premium event coverage.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-xl">📍</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Visit Our Studio</h4>
+                                <p class="text-light-gray">123 Event Street, Creative District<br>New York, NY 10001</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-secondary/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-xl">📞</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Call Us</h4>
+                                <p class="text-light-gray">+1 (555) 123-4567<br>Mon-Fri: 9AM-6PM EST</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-xl">✉️</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Email Us</h4>
+                                <p class="text-light-gray">hello@yommyplusevent.com<br>Response within 24 hours</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Media -->
+                    <div class="mt-12">
+                        <h4 class="font-bold text-lg mb-4">Follow Our Work</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-12 h-12 bg-dark-light rounded-xl flex items-center justify-center hover:bg-primary/20 transition-colors">
+                                <span class="text-xl">📷</span>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-dark-light rounded-xl flex items-center justify-center hover:bg-primary/20 transition-colors">
+                                <span class="text-xl">🎬</span>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-dark-light rounded-xl flex items-center justify-center hover:bg-primary/20 transition-colors">
+                                <span class="text-xl">📘</span>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-dark-light rounded-xl flex items-center justify-center hover:bg-primary/20 transition-colors">
+                                <span class="text-xl">🐦</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="bg-dark-light p-8 rounded-3xl">
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label for="name" class="block mb-2 font-semibold">Full Name *</label>
+                            <input type="text" id="name" required 
+                                   class="w-full bg-dark border border-light-gray/20 rounded-xl px-6 py-4 focus:outline-none focus:border-primary transition-colors">
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="email" class="block mb-2 font-semibold">Email *</label>
+                                <input type="email" id="email" required 
+                                       class="w-full bg-dark border border-light-gray/20 rounded-xl px-6 py-4 focus:outline-none focus:border-primary transition-colors">
+                            </div>
+                            <div>
+                                <label for="phone" class="block mb-2 font-semibold">Phone</label>
+                                <input type="tel" id="phone" 
+                                       class="w-full bg-dark border border-light-gray/20 rounded-xl px-6 py-4 focus:outline-none focus:border-primary transition-colors">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="eventType" class="block mb-2 font-semibold">Event Type</label>
+                            <select id="eventType" 
+                                    class="w-full bg-dark border border-light-gray/20 rounded-xl px-6 py-4 focus:outline-none focus:border-primary transition-colors">
+                                <option value="">Select Event Type</option>
+                                <option value="wedding">Wedding</option>
+                                <option value="corporate">Corporate</option>
+                                <option value="concert">Concert</option>
+                                <option value="conference">Conference</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block mb-2 font-semibold">Tell Us About Your Event *</label>
+                            <textarea id="message" rows="4" required 
+                                      class="w-full bg-dark border border-light-gray/20 rounded-xl px-6 py-4 focus:outline-none focus:border-primary transition-colors"></textarea>
+                        </div>
+                        
+                        <button type="submit" 
+                                class="w-full bg-gradient-to-r from-primary to-secondary text-white font-semibold py-4 rounded-xl hover:opacity-90 transition-opacity">
+                            Submit Inquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+                <!-- Footer -->
+        <footer class="pt-20 pb-10 border-t border-light-gray/10">
+            <div class="grid md:grid-cols-4 gap-10 mb-12">
+                <!-- Brand -->
+                <div>
+                    <a href="#" class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
+                            <span class="text-2xl">🎬</span>
+                        </div>
+                        <span class="text-xl font-display font-bold">YOMMY PLUS EVENT</span>
+                    </a>
+                    <p class="text-light-gray">
+                        Premium event coverage and production for unforgettable experiences.
+                    </p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#services" class="text-light-gray hover:text-primary transition-colors">Services</a></li>
+                        <li><a href="#gallery" class="text-light-gray hover:text-primary transition-colors">Gallery</a></li>
+                        <li><a href="#portfolio" class="text-light-gray hover:text-primary transition-colors">Portfolio</a></li>
+                        <li><a href="#contact" class="text-light-gray hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-light-gray hover:text-primary transition-colors">Event Coverage</a></li>
+                        <li><a href="#" class="text-light-gray hover:text-primary transition-colors">Videography</a></li>
+                        <li><a href="#" class="text-light-gray hover:text-primary transition-colors">Photography</a></li>
+                        <li><a href="#" class="text-light-gray hover:text-primary transition-colors">Live Streaming</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Stay Updated</h4>
+                    <p class="text-light-gray mb-4">Get event tips and portfolio updates</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" 
+                               class="flex-grow bg-dark-light border border-light-gray/20 rounded-l-xl px-4 py-3 focus:outline-none focus:border-primary">
+                        <button class="bg-primary text-white px-4 rounded-r-xl hover:bg-primary/90 transition-colors">
+                            →
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div class="pt-8 border-t border-light-gray/10 flex flex-col md:flex-row justify-between items-center">
+                <div class="text-light-gray text-sm mb-4 md:mb-0">
+                    © 2024 Yommy Plus Event. All rights reserved.
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-light-gray hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-light-gray hover:text-primary transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+        <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeMenu = document.getElementById('closeMenu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('-translate-x-full');
+        });
+        
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('-translate-x-full');
+        });
+        
+        // Close menu when clicking a link
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('-translate-x-full');
+            });
+        });
+        
+       // script.js - Updated video handling section
+
+// Video Gallery Management
+class VideoGallery {
+    constructor() {
+        this.modal = document.getElementById('videoModal');
+        this.videoPlayer = document.getElementById('videoPlayer');
+        this.videoTitle = document.getElementById('videoTitle');
+        this.videoDescription = document.getElementById('videoDescription');
+        this.closeButton = document.getElementById('closeVideo');
+        
+        this.init();
+    }
+    
+    init() {
+        // Add click events to video thumbnails
+        document.querySelectorAll('[data-video-src]').forEach(thumbnail => {
+            thumbnail.addEventListener('click', (e) => {
+                this.openVideo(
+                    thumbnail.getAttribute('data-video-src'),
+                    thumbnail.getAttribute('data-video-title')
+                );
+            });
+        });
+        
+        // Close modal events
+        this.closeButton.addEventListener('click', () => this.closeVideo());
+        this.modal.addEventListener('click', (e) => {
+            if (e.target === this.modal) {
+                this.closeVideo();
+            }
+        });
+        
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !this.modal.classList.contains('hidden')) {
+                this.closeVideo();
+            }
+        });
+    }
+    
+    openVideo(videoSrc, title) {
+        // Set video source
+        this.videoPlayer.src = videoSrc;
+        
+        // Set title
+        this.videoTitle.textContent = title;
+        
+        // Show modal
+        this.modal.classList.remove('hidden');
+        this.modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+        
+        // Play video
+        this.videoPlayer.load();
+        
+        // Add analytics tracking (optional)
+        this.trackVideoPlay(title);
+    }
+    
+    closeVideo() {
+        // Pause video
+        this.videoPlayer.pause();
+        
+        // Hide modal
+        this.modal.classList.add('hidden');
+        this.modal.classList.remove('flex');
+        document.body.style.overflow = 'auto';
+        
+        // Reset video source to save memory
+        this.videoPlayer.src = '';
+    }
+    
+    trackVideoPlay(videoName) {
+        // In production, add analytics tracking here
+        console.log(`Video played: ${videoName}`);
+        
+        // Example with Google Analytics:
+        // gtag('event', 'video_play', {
+        //     'video_title': videoName
+        // });
+    }
+}
+
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    const videoGallery = new VideoGallery();
+});
+        
+        // Contact Form Submission
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                eventType: document.getElementById('eventType').value,
+                message: document.getElementById('message').value
+            };
+            
+            // In production, this would send to a server
+            console.log('Form submitted:', formData);
+            
+            // Show success message
+            alert('Thank you for your inquiry! We\'ll contact you within 24 hours.');
+            e.target.reset();
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Add scroll animation on elements
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe elements for scroll animations
+        document.querySelectorAll('.gallery-item, .grid > div').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+    </body>
+    </html>
