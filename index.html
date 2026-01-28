@@ -4,22 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yommy Plus Event | Premium Event </title>
-    <meta name="description" content="Yommy Plus Event delivers premium event coverage, videography, photography, and full-scale event production for unforgettable experiences.">
+    <meta name="description" content="Yommy Plus Event delivers premium event coverage, Cocktails, Mocktails, and full-scale event production for unforgettable experiences.">
     
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Custom Tailwind configuration -->
+    <!-- script for Tailwind configuration -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#FF3366',    // Bold accent color
-                        secondary: '#00C2FF',  // Complementary accent
-                        dark: '#0A0A0A',       // Rich black background
-                        'dark-light': '#1A1A1A', // Slightly lighter dark
-                        'light': '#F8F9FA',    // Off-white
+                        primary: '#FF3366',   
+                        secondary: '#00C2FF',  
+                        dark: '#0A0A0A',       
+                        'dark-light': '#1A1A1A', 
+                        'light': '#F8F9FA',  
                         'light-gray': '#E8E8E8'
                     },
                     fontFamily: {
@@ -51,52 +50,14 @@
     </script>
     
     <!-- Fonts -->
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎬</text></svg>">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
     
-    <style>
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #1A1A1A;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #FF3366;
-            border-radius: 5px;
-        }
-        
-        /* Selection color */
-        ::selection {
-            background-color: rgba(255, 51, 102, 0.3);
-        }
-        
-        /* Smooth transitions */
-        * {
-            transition: background-color 0.3s ease, border-color 0.3s ease;
-        }
-        
-        /* Image hover effects */
-        .gallery-item {
-            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .gallery-item:hover {
-            transform: translateY(-8px);
-        }
-        
-        /* Gradient text */
-        .gradient-text {
-            background: linear-gradient(135deg, #FF3366 0%, #00C2FF 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-    </style>
 </head>
 <body class="bg-dark text-light font-sans overflow-x-hidden">
     <!-- Reusable Container -->
