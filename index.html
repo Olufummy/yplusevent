@@ -54,9 +54,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
     
 </head>
 <body class="bg-dark text-light font-sans overflow-x-hidden">
@@ -68,12 +70,16 @@
 
                 <!-- Navigation -->
         <nav class="py-6 flex items-center justify-between sticky top-0 z-50 bg-dark/90 backdrop-blur-md">
-            <!-- Logo - In production, replace with actual logo image -->
+          <!-- Logo -->
             <a href="#" class="flex items-center space-x-3">
-                <div class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-                    <span class="text-2xl">🎬</span>
-                </div>
-                <span class="text-xl font-display font-bold">YOMMY PLUS EVENT</span>
+                <img 
+                    src="assets/images/logo.png" 
+                    alt="Yommy Plus Event Logo"
+                    class="w-10 h-10 object-contain rounded-lg"
+                />
+                <span class="text-xl font-display font-bold">
+                    YOMMY PLUS EVENT
+                </span>
             </a>
             
             <!-- Desktop Menu -->
@@ -122,8 +128,8 @@
                     </h1>
                     
                     <p class="text-xl md:text-2xl text-light-gray mb-10 max-w-2xl animate-slide-up">
-                        We transform events into cinematic experiences through premium coverage, 
-                        production, and storytelling that lasts forever.
+                        We transform your EVENT into cinematic experiences through premium and Luxury, 
+                        with a storytelling that lasts forever.
                     </p>
                     
                     <div class="flex flex-col sm:flex-row gap-4 animate-slide-up" style="animation-delay: 0.2s">
@@ -139,15 +145,15 @@
                 <!-- Stats -->
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 max-w-3xl">
                     <div class="text-center">
-                        <div class="text-4xl md:text-5xl font-bold text-primary mb-2">500+</div>
+                        <div class="text-4xl md:text-5xl font-bold text-primary mb-2">1000+</div>
                         <div class="text-light-gray">Events Covered</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-4xl md:text-5xl font-bold text-secondary mb-2">50+</div>
-                        <div class="text-light-gray">Cities Worldwide</div>
+                        <div class="text-4xl md:text-5xl font-bold text-secondary mb-2">+</div>
+                        <div class="text-light-gray">Every Cities</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-4xl md:text-5xl font-bold text-primary mb-2">98%</div>
+                        <div class="text-4xl md:text-5xl font-bold text-primary mb-2">99%</div>
                         <div class="text-light-gray">Client Satisfaction</div>
                     </div>
                     <div class="text-center">
@@ -196,9 +202,9 @@
                     <div class="w-16 h-16 bg-secondary/20 rounded-xl flex items-center justify-center mb-6">
                         <span class="text-3xl">📸</span>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Videography & Photography</h3>
+                    <h3 class="text-2xl font-bold mb-4">Decoration</h3>
                     <p class="text-light-gray mb-6">
-                        Cinematic video production and professional photography that tells your event's unique story.
+                        Cinematic event production and professional design that tells your event's unique story.
                     </p>
                     <a href="#" class="text-primary font-semibold hover:underline inline-flex items-center">
                         View portfolio →
@@ -210,9 +216,9 @@
                     <div class="w-16 h-16 bg-primary/20 rounded-xl flex items-center justify-center mb-6">
                         <span class="text-3xl">🌐</span>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Live Streaming</h3>
+                    <h3 class="text-2xl font-bold mb-4">Cocktails and Mocktails</h3>
                     <p class="text-light-gray mb-6">
-                        Professional multi-camera live streaming with production quality for global virtual audiences.
+                        Professional and amazing taste drink to refresh your body and soul.
                     </p>
                     <a href="#" class="text-primary font-semibold hover:underline inline-flex items-center">
                         See options →
@@ -249,37 +255,51 @@
     
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Video 1 - Wedding -->
-        <div class="relative rounded-2xl overflow-hidden gallery-item cursor-pointer group" 
-             data-video-src="assets/videos/event-videos/intro.mp4"
-             data-video-title="Destination Wedding in Bali">
+            <div class="relative rounded-2xl overflow-hidden gallery-item cursor-pointer group" 
+            data-video-src="assets/videos/event-videos/vivv.mp4"
+            data-video-title="Destination Wedding in ONDO">
+
             <div class="aspect-video bg-dark-light relative">
+
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
-                <!-- Local thumbnail image -->
-                <div class="absolute inset-0 bg-[url('assets/videos/video-thumbnails/wedding-thumbnail.jpg')] bg-cover bg-center"></div>
+
+                <!-- Thumbnail Image -->
+                <div class="absolute inset-0 bg-cover bg-center"
+                    style="background-image: url('assets/videos/event-videos/6.jpg');">
+                </div>
+
                 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20"></div>
+
                 <div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold z-30">
                     Wedding
                 </div>
+
                 <div class="absolute inset-0 flex items-center justify-center z-30">
                     <div class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
                         <span class="text-3xl text-dark">▶</span>
                     </div>
                 </div>
+
             </div>
+
             <div class="absolute bottom-0 left-0 right-0 p-6 z-30">
-                <h3 class="text-xl font-bold mb-2">Destination Wedding in Bali</h3>
+                <h3 class="text-xl font-bold mb-2">Destination Wedding in ondo</h3>
                 <p class="text-light-gray text-sm">Cinematic highlight film | 3:45 min</p>
             </div>
+
         </div>
+
         
         <!-- Video 2 - Corporate Event -->
         <div class="relative rounded-2xl overflow-hidden gallery-item cursor-pointer group"
-             data-video-src="assets/videos/event-videos/corporate-event.mp4"
+             data-video-src="assets/videos/event-videos/viv.mp4"
              data-video-title="Tech Conference Keynote">
             <div class="aspect-video bg-dark-light relative">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
                 <!-- Local thumbnail image -->
-                <div class="absolute inset-0 bg-[url('assets/videos/video-thumbnails/conference-thumbnail.jpg')] bg-cover bg-center"></div>
+                  <div class="absolute inset-0 bg-cover bg-center"
+                    style="background-image: url('assets/videos/event-videos/6.jpg');">
+                </div>
                 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20"></div>
                 <div class="absolute top-4 left-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-semibold z-30">
                     Corporate
@@ -298,12 +318,14 @@
         
         <!-- Video 3 - Music Festival -->
         <div class="relative rounded-2xl overflow-hidden gallery-item cursor-pointer group"
-             data-video-src="assets/videos/event-videos/music-festival.mp4"
-             data-video-title="Music Festival Aftermovie">
+             data-video-src="assets/videos/event-videos/vivv.mp4"
+             data-video-title="Festival Aftermovie">
             <div class="aspect-video bg-dark-light relative">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
                 <!-- Local thumbnail image -->
-                <div class="absolute inset-0 bg-[url('assets/videos/video-thumbnails/festival-thumbnail.jpg')] bg-cover bg-center"></div>
+                 <div class="absolute inset-0 bg-cover bg-center"
+                    style="background-image: url('assets/videos/event-videos/6.jpg');">
+                </div>
                 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20"></div>
                 <div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold z-30">
                     Music
@@ -315,7 +337,7 @@
                 </div>
             </div>
             <div class="absolute bottom-0 left-0 right-0 p-6 z-30">
-                <h3 class="text-xl font-bold mb-2">Music Festival Aftermovie</h3>
+                <h3 class="text-xl font-bold mb-2">Festival Aftermovie</h3>
                 <p class="text-light-gray text-sm">Event highlight reel | 2:55 min</p>
             </div>
         </div>
@@ -327,7 +349,9 @@
             <div class="aspect-video bg-dark-light relative">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
                 <!-- Local thumbnail image -->
-                <div class="absolute inset-0 bg-[url('assets/videos/video-thumbnails/concert-thumbnail.jpg')] bg-cover bg-center"></div>
+                 <div class="absolute inset-0 bg-cover bg-center"
+                    style="background-image: url('assets/videos/event-videos/6.jpg');">
+                </div>
                 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20"></div>
                 <div class="absolute top-4 left-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-semibold z-30">
                     Concert
@@ -351,7 +375,9 @@
             <div class="aspect-video bg-dark-light relative">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
                 <!-- Local thumbnail image -->
-                <div class="absolute inset-0 bg-[url('assets/videos/video-thumbnails/gala-thumbnail.jpg')] bg-cover bg-center"></div>
+                 <div class="absolute inset-0 bg-cover bg-center"
+                    style="background-image: url('assets/videos/event-videos/6.jpg');">
+                </div>
                 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20"></div>
                 <div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold z-30">
                     Gala
@@ -375,7 +401,9 @@
             <div class="aspect-video bg-dark-light relative">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
                 <!-- Local thumbnail image -->
-                <div class="absolute inset-0 bg-[url('assets/videos/video-thumbnails/corporate-thumbnail.jpg')] bg-cover bg-center"></div>
+                 <div class="absolute inset-0 bg-cover bg-center"
+                    style="background-image: url('assets/videos/event-videos/6.jpg');">
+                </div>
                 <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20"></div>
                 <div class="absolute top-4 left-4 bg-gradient-to-r from-primary to-secondary text-white px-3 py-1 rounded-full text-sm font-semibold z-30">
                     Showreel
@@ -509,7 +537,7 @@
                     <span class="text-2xl font-bold text-light-gray">CORP GROUP</span>
                 </div>
                 <div class="flex items-center justify-center p-6 bg-dark-light rounded-xl hover:scale-105 transition-transform duration-300 grayscale hover:grayscale-0">
-                    <span class="text-2xl font-bold text-light-gray">GLOBAL TECH</span>
+                    <span class="text-2xl font-bold text-light-gray">GLOBAL EVENT</span>
                 </div>
                 <div class="flex items-center justify-center p-6 bg-dark-light rounded-xl hover:scale-105 transition-transform duration-300 grayscale hover:grayscale-0">
                     <span class="text-2xl font-bold text-light-gray">ELITE WEDDINGS</span>
@@ -523,8 +551,8 @@
                     Yommy Plus Event transformed our annual conference into a cinematic experience. 
                     Their attention to detail and creative vision exceeded all expectations.
                 </p>
-                <div class="font-semibold text-lg">Sarah Johnson</div>
-                <div class="text-light-gray">Event Director, Global Tech Summit</div>
+                <div class="font-semibold text-lg">Yomi Debbie</div>
+                <div class="text-light-gray">Event Director, Global Summit</div>
             </div>
         </section>
 
@@ -546,7 +574,7 @@
                             </div>
                             <div>
                                 <h4 class="font-bold text-lg mb-1">Visit Our Studio</h4>
-                                <p class="text-light-gray">123 Event Street, Creative District<br>New York, NY 10001</p>
+                                <p class="text-light-gray">123 Event Street, Creative District<br>IGOBA, AKURE</p>
                             </div>
                         </div>
                         
@@ -556,7 +584,7 @@
                             </div>
                             <div>
                                 <h4 class="font-bold text-lg mb-1">Call Us</h4>
-                                <p class="text-light-gray">+1 (555) 123-4567<br>Mon-Fri: 9AM-6PM EST</p>
+                                <p class="text-light-gray">+23412345678990<br>Mon-Fri: 9AM-6PM EST</p>
                             </div>
                         </div>
                         
@@ -629,7 +657,7 @@
                         <div>
                             <label for="message" class="block mb-2 font-semibold">Tell Us About Your Event *</label>
                             <textarea id="message" rows="4" required 
-                                      class="w-full bg-dark border border-light-gray/20 rounded-xl px-6 py-4 focus:outline-none focus:border-primary transition-colors"></textarea>
+                                      class="w-full bg-dark border border-light-gray/20 rounded-xl px-6 py-4 focus:outline-none field-sizing-content focus:border-primary transition-colors"></textarea>
                         </div>
                         
                         <button type="submit" 
@@ -640,6 +668,16 @@
                 </div>
             </div>
         </section>
+
+        <!-- WhatsApp Button -->
+      <a href="https://wa.me/2348067616620?text=Hello%20Yommy%20Plus%20Event,%20I%20want%20to%20book%20an%20event"
+        class="whatsapp-btn"
+        target="_blank">
+        <i class="fa fa-whatsapp"></i>
+        </a>
+
+        
+
 
                 <!-- Footer -->
         <footer class="pt-20 pb-10 border-t border-light-gray/10">
@@ -696,7 +734,7 @@
             <!-- Bottom Bar -->
             <div class="pt-8 border-t border-light-gray/10 flex flex-col md:flex-row justify-between items-center">
                 <div class="text-light-gray text-sm mb-4 md:mb-0">
-                    © 2024 Yommy Plus Event. All rights reserved.
+                    © 2026 Yommy Plus Event. All rights reserved.
                 </div>
                 <div class="flex space-x-6">
                     <a href="#" class="text-light-gray hover:text-primary transition-colors">Privacy Policy</a>
@@ -704,6 +742,11 @@
                 </div>
             </div>
         </footer>
+
+        
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
     </div>
 
         <script>
