@@ -9,6 +9,6 @@ A distinctive, responsive event-services website for Yommy Plus Event.
 - Accessible mobile navigation and video player
 - A booking form that prepares a detailed WhatsApp enquiry
 - Responsive layouts with reduced-motion support
-- Lightweight HTML, CSS and JavaScript with no framework dependency
+- Lightweight HTML, CSS and JavaScript no active framework dependency
 
 Open `index.html` or serve the folder with any static web server.
